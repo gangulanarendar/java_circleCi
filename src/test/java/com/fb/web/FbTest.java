@@ -28,8 +28,8 @@ public class FbTest {
 	//	capabilities.setCapability("marionette", false);
 	//    driver = new FirefoxDriver(capabilities);
 
-		//System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-		System.setProperty("webdriver.chrome.driver","C:/Users/narendar.g.EXCERSHYD/Downloads/chromedriver_win32/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+		//System.setProperty("webdriver.chrome.driver","C:/Users/narendar.g.EXCERSHYD/Downloads/chromedriver_win32/chromedriver.exe");
          //       driver =new ChromeDriver();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless","--disable-gpu");
