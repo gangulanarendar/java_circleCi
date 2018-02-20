@@ -54,10 +54,10 @@ public class FbTest {
 	        driver.get(URL);
 	        driver.manage().window().maximize();
 	        driver.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
-	        driver.findElement(By.name("identifier")).sendKeys("yadgirkerashwin202");
+	        driver.findElement(By.name("identifier")).sendKeys("gangulanarendar@gmail.com");
 	        driver.findElement(By.xpath("//div[@id='identifierNext']/content/span")).click();
 	        Thread.sleep(2000);
-	        driver.findElement(By.xpath("//div[@id='password']/div/div/div/input")).sendKeys("password");
+	        driver.findElement(By.xpath("//div[@id='password']/div/div/div/input")).sendKeys("9951520928");
 	       
 	        driver.findElement(By.xpath("//div[@id='passwordNext']/content/span")).click();
 	        Thread.sleep(5000);
