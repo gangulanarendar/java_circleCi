@@ -10,9 +10,9 @@
     <classes>
       <class name="com.fb.web.FbTest">
         <methods>
-          <include name="sample_Test"/>
           <include name="setup"/>
-          <include name="Google_Search_Test"/>
+          <include name="shutdown"/>
+          <include name="loginTogmail"/>
         </methods>
       </class> <!-- com.fb.web.FbTest -->
     </classes>

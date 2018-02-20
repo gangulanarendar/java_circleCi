@@ -12,10 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 public class FBPage {
 
 	WebDriver driver;
-	boolean present = false;
-	String getTestURL = "";
-	String GmailURL = "http://www.gmail.com/";
-
+	
 	@FindBy(id = "email")
 	WebElement emailId;
 
@@ -25,7 +22,7 @@ public class FBPage {
 	@FindBy(id = "loginbutton")
 	WebElement lgnbut;
 
-	@FindBy(xpath = ".//*[@class='_4rbf _53ij']")
+	@FindBy(xpath = ".//*[@class='_4rbf_53ij']")
 	WebElement errorTextId;
 
 	Logger logger = Logger.getLogger("devpinoyLogger");
@@ -51,8 +48,8 @@ public class FBPage {
 		Thread.sleep(2000);
 		lgnbut.click();
 		Thread.sleep(2000);
-		System.out.println("******************************************ERRRRRORR***********************");
-		System.out.println("The error is:  " + errorTextId.getText());
+		//System.out.println("******************************************ERRRRRORR***********************");
+		//System.out.println("The error is:  " + errorTextId.getText());
 		Thread.sleep(2000);
 	}
 

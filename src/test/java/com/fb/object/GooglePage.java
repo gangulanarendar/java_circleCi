@@ -13,17 +13,11 @@ import org.openqa.selenium.support.PageFactory;
 public class GooglePage {
 
 	WebDriver driver;
-	boolean present = false;
-	String getTestURL = "";
-	String GmailURL = "http://www.gmail.com/";
-
-	@FindBy(id = "gs_htif0")
-	WebElement searchId;
 	
 	@FindBy(xpath="//input[@name='q']")
 	WebElement inputId;
 
-	Logger logger = Logger.getLogger("devpinoyLogger");
+	Logger logger = Logger.getLogger("GooglePage");
 
 	public GooglePage(WebDriver driver) {
 		this.driver = driver;
@@ -38,7 +32,6 @@ public class GooglePage {
 	}
 
 	private void enterSearchText(String text) throws InterruptedException {
-		// TODO Auto-generated method stub
 		Thread.sleep(2000);
 		inputId.sendKeys(text);
 		Thread.sleep(1000);
