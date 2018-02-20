@@ -2,28 +2,16 @@ package com.fb.web;
 
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.junit.After;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.fb.object.FBPage;
 import com.fb.object.GooglePage;
-import com.jcraft.jsch.Channel;
-import com.jcraft.jsch.ChannelExec;
-import com.jcraft.jsch.JSch;
-import com.jcraft.jsch.JSchException;
-import com.jcraft.jsch.Session;
 public class FbTest {
 
 	WebDriver driver;
@@ -40,7 +28,8 @@ public class FbTest {
 	//	capabilities.setCapability("marionette", false);
 	//    driver = new FirefoxDriver(capabilities);
 
-		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+		//System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver","C:/Users/narendar.g.EXCERSHYD/Downloads/chromedriver_win32/chromedriver.exe");
          //       driver =new ChromeDriver();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless","--disable-gpu");
@@ -53,13 +42,13 @@ public class FbTest {
 
 	@Test
 	public void Google_Search_Test() throws InterruptedException, IOException {
-                System.out.println("Starting the testing");
+        System.out.println("Starting the testing");
 		driver.get("http://www.google.com/");
 		Thread.sleep(2000);
 		objgoogle = new GooglePage(driver);
 		objgoogle.googleSearch("Facebook");
 		objfb= new FBPage(driver);
-		objfb.fbLogin("test@t.com", "test123");
+		objfb.fbLogin("gandar@gmail.com", "35436");
 
 	}
 

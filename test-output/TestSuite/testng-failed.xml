@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="classes">
+  <test name="Fb Integration Testing">
+    <classes>
+      <class name="com.fb.web.FbTest"/>
+    </classes>
+  </test> <!-- Fb Integration Testing -->
+  <test name="Fb Integration Testing(failed)" parallel="classes">
+    <classes>
+      <class name="com.fb.web.FbTest">
+        <methods>
+          <include name="sample_Test"/>
+          <include name="setup"/>
+          <include name="Google_Search_Test"/>
+        </methods>
+      </class> <!-- com.fb.web.FbTest -->
+    </classes>
+  </test> <!-- Fb Integration Testing(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
