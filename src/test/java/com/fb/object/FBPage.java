@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FBPage {
+public class FBPage {/*
 
 	WebDriver driver;
 	
@@ -53,4 +53,4 @@ public class FBPage {
 		Thread.sleep(2000);
 	}
 
-}
+*/}
