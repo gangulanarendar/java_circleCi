@@ -33,7 +33,7 @@ public class FbTest {
 
 		ChromeOptions options = new ChromeOptions();
 	 	//options.addArguments("--headless", "--disable-gpu");
-	  	options.addArguments("---xvfb");
+	  	options.addArguments("--browsertime.xvfb");
 	  	
 		driver = new ChromeDriver(options);
 		//driver = new ChromeDriver();
