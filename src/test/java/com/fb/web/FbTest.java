@@ -31,11 +31,11 @@ public class FbTest {
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		// System.setProperty("webdriver.chrome.driver","C:/Users/narendar.g.EXCERSHYD/Downloads/chromedriver_win32/chromedriver.exe");
 
-		//ChromeOptions options = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
 	 	//options.addArguments("--headless", "--disable-gpu");
-	 //	options.addArguments("headless");
+	  	options.addArguments("---xvfb");
 	  	
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		//driver = new ChromeDriver();
 
 
