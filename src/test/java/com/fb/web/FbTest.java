@@ -54,7 +54,7 @@ public class FbTest {
 	public void loginTogmail() throws InterruptedException{
 		   String URL = "https://www.google.com/intl/en_in/gmail/about/";
 	        driver.get(URL);
-	       driver.manage().window().maximize();
+	     //  driver.manage().window().maximize();
 	        Thread.sleep(5000);
 	        driver.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
 	        driver.findElement(By.name("identifier")).sendKeys("test.letznav@gmail.com");
