@@ -1,7 +1,6 @@
 package com.fb.web;
 
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,10 +29,10 @@ public class FbTest {
 	public void setup() {
 
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-		// System.setProperty("webdriver.chrome.driver","C:/Users/narendar.g.EXCERSHYD/Downloads/chromedriver_win32(1)/chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver","C:/Users/narendar.g.EXCERSHYD/Downloads/chromedriver_win32/chromedriver.exe");
 
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless", "--disable-gpu");
+	//	options.addArguments("--headless", "--disable-gpu");
 		driver = new ChromeDriver(options);
 		//driver = new ChromeDriver();
 
@@ -53,7 +52,7 @@ public class FbTest {
 	public void loginTogmail() throws InterruptedException{
 		   String URL = "https://www.google.com/intl/en_in/gmail/about/";
 	        driver.get(URL);
-	        driver.manage().window().maximize();
+	      //  driver.manage().window().maximize();
 	        driver.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
 	        driver.findElement(By.name("identifier")).sendKeys("test.letznav@gmail.com");
 	        driver.findElement(By.xpath("//div[@id='identifierNext']/content/span")).click();
