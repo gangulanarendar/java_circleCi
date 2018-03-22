@@ -46,7 +46,7 @@ public class FbTest {
 	
 	@Test
 	public void sample_Test() {
-		System.out.println("This is passed test");
+		System.out.println("This is passed test 2");
 	}
 
 
