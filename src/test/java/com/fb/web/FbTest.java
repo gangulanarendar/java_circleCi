@@ -1,8 +1,13 @@
 package com.fb.web;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,6 +61,17 @@ public class FbTest {
 	        driver.get(URL);
 	     //  driver.manage().window().maximize();
 	        Thread.sleep(5000);
+	        File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				 // now copy the  screenshot to desired location using copyFile //method
+				FileUtils.copyFile(src, new File("/home/circleci/circleCiTesting/target/surefire-reports/naren_sc_shot_1.png"));
+				}
+				 
+				catch (IOException e)
+				 {
+				  System.out.println(e.getMessage());
+				 
+				 }	
 	        driver.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
 	        driver.findElement(By.name("identifier")).sendKeys("test.letznav@gmail.com");
 	        driver.findElement(By.xpath("//div[@id='identifierNext']/content/span")).click();
